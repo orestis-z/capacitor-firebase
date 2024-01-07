@@ -8,6 +8,7 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.Filter;
 import com.google.firebase.firestore.ListenerRegistration;
 import com.google.firebase.firestore.Query;
+import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.SetOptions;
 import io.capawesome.capacitorjs.plugins.firebase.firestore.classes.constraints.QueryCompositeFilterConstraint;
 import io.capawesome.capacitorjs.plugins.firebase.firestore.classes.options.AddCollectionSnapshotListenerOptions;
@@ -87,6 +88,18 @@ public class FirebaseFirestore {
     public void updateDocument(@NonNull UpdateDocumentOptions options, @NonNull EmptyResultCallback callback) {
         String reference = options.getReference();
         Map<String, Object> data = options.getData();
+
+        for (Map.Entry<String, Object> entry : data.entrySet()) {
+            if (entry.getValue() instanceof Map) {
+                Map<?, ?> valueMap = (Map<?, ?>) entry.getValue();
+                if ("increment".equals(valueMap.get("_methodName"))) {
+                    Number incrementValue = (Number) valueMap.get("wu");
+                    if (incrementValue != null) {
+                        data.put(entry.getKey(), FieldValue.increment(incrementValue.doubleValue()));
+                    }
+                }
+            }
+        }
 
         this.firestoreInstance.document(reference)
             .update(data)
