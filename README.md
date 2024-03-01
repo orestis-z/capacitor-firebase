@@ -6,7 +6,7 @@
 </div>
 <br />
 <p align="center">
-  <a href="https://github.com/capawesome-team/capacitor-firebase"><img src="https://img.shields.io/maintenance/yes/2023?style=flat-square" /></a>
+  <a href="https://github.com/capawesome-team/capacitor-firebase"><img src="https://img.shields.io/maintenance/yes/2024?style=flat-square" /></a>
   <a href="https://github.com/capawesome-team/capacitor-firebase/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/capawesome-team/capacitor-firebase/ci.yml?branch=main&style=flat-square" /></a>
   <a href="https://github.com/capawesome-team/capacitor-firebase"><img src="https://img.shields.io/github/license/capawesome-team/capacitor-firebase?style=flat-square" /></a>
   <a href="https://github.com/capawesome-team"><img src="https://img.shields.io/badge/part%20of-capawesome-%234f46e5?style=flat-square" /></a>
@@ -20,7 +20,7 @@ Capacitor Firebase is a collection of Capacitor plugins that make it easier for 
 
 - 🔋 Supports **Android, iOS and the Web**
 - ⚡️ **Capacitor 5** support
-- 🔥 **Firebase Web SDK version 9** (modular) support
+- 🔥 **Firebase Web SDK version 10** (modular) support
 - 🦋 Consistent versioning (no more SDK versions conflicts)
 - 👁 Unified Typescript definitions
 - 📄 Full documentation

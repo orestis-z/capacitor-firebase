@@ -126,6 +126,11 @@ export default config;
 
 A working example can be found here: [robingenz/capacitor-firebase-authentication-demo](https://github.com/robingenz/capacitor-firebase-authentication-demo)
 
+## Starter Templates
+
+The following starter templates are available:
+- [Ionstarter Angular Firebase](https://ionstarter.dev/)
+
 ## Usage
 
 ```typescript
@@ -1387,6 +1392,8 @@ addListener(eventName: 'authStateChange', listenerFunc: AuthStateChangeListener)
 ```
 
 Listen for the user's sign-in state changes.
+
+**Attention:** This listener is not triggered when the `skipNativeAuth` is used. Use the Firebase JavaScript SDK instead.
 
 | Param              | Type                                                                        |
 | ------------------ | --------------------------------------------------------------------------- |
